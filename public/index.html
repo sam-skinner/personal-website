@@ -16,19 +16,24 @@
     <script defer src="/__/firebase/9.9.0/firebase-app-compat.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
   </head>
+
   <body>
     <header>
       <a id="skip-nav" class="screenreader-only" href="#main-content">
         Skip to Content
       </a>
-      <nav class="primary-nav | bg-neutral-200">
-        <ul role="list" class="container">
+      <nav class="primary-nav">
+        <ul role="list" class="nav-list container">
           <li><a href="/">Home</a></li>
+          <li><a href="/experience">Experience</a></li>
+          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </nav>
     </header>
+
     <main id="main-content" class="container">
-      <section>
+      <section class="hero">
         <h1 class="fs-primary clr-primary-400">
           Hi, I'm Sam. I make beautiful websites.
         </h1>
@@ -36,9 +41,45 @@
           Let me help your digital dream become a reality.
         </p>
       </section>
-      <section></section>
+      <section class="section">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolor
+          perferendis vero quae. Ipsam, tempora nostrum! Ducimus voluptas iste
+          maiores vero corporis commodi sed totam soluta consectetur iusto,
+          saepe animi dicta molestias veniam, repudiandae necessitatibus minus
+          atque sapiente nesciunt laudantium eveniet delectus eligendi aliquam?
+          Esse a quos dolore incidunt eos.
+        </p>
+      </section>
+      <section class="section">
+        <h2>Lorem, ipsum.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+          similique voluptas saepe laudantium ipsum tempora unde reprehenderit,
+          dolorem quasi temporibus dicta dolor tenetur voluptatem ipsam velit,
+          veniam ea qui, quisquam non! Expedita, ullam debitis totam ratione ad
+          facilis natus repellat quo quisquam omnis animi dolores doloremque
+          atque officiis eius cumque quis aliquam itaque enim fugiat sint,
+          quaerat repudiandae molestias? Placeat perspiciatis molestias modi,
+          labore soluta beatae harum voluptatum quos fugiat.
+        </p>
+      </section>
+      <section class="section">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, vero,
+          quisquam ea corrupti delectus eveniet in quidem, mollitia animi
+          praesentium consectetur natus? Mollitia, adipisci cumque. Harum,
+          sapiente natus. Ipsam, repellat.
+        </p>
+      </section>
     </main>
-    <footer></footer>
+
+    <footer class="text-center">
+      <small>&copy; 2022 Sam Skinner</small>
+    </footer>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const loadEl = document.querySelector("#load");
