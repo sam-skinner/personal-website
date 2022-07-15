@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sam Skinner | Web Developer</title>
+
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="/__/firebase/9.9.0/firebase-app-compat.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  </head>
+  <body>
+    <header>
+      <a id="skip-nav" class="screenreader-only" href="#main-content">
+        Skip to Content
+      </a>
+      <nav class="primary-nav | bg-neutral-200">
+        <ul role="list" class="container">
+          <li><a href="/">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-content" class="container">
+      <section>
+        <h1 class="fs-primary clr-primary-400">
+          Hi, I'm Sam. I make beautiful websites.
+        </h1>
+        <p class="fs-secondary">
+          Let me help your digital dream become a reality.
+        </p>
+      </section>
+      <section></section>
+    </main>
+    <footer></footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const loadEl = document.querySelector("#load");
+
+        try {
+          let app = firebase.app();
+          let features = [
+            "auth",
+            "database",
+            "firestore",
+            "functions",
+            "messaging",
+            "storage",
+            "analytics",
+            "remoteConfig",
+            "performance",
+          ].filter(feature => typeof app[feature] === "function");
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(
+            ", "
+          )}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent =
+            "Error loading the Firebase SDK, check the console.";
+        }
+      });
+    </script>
+  </body>
+</html>
