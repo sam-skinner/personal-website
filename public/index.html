@@ -8,19 +8,14 @@
     <link rel="stylesheet" href="style/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
 
     <script defer src="/__/firebase/9.9.0/firebase-app-compat.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
   </head>
   <body>
     <header>
-      <a id="skip-nav" class="screenreader-only" href="#main-content">
-        Skip to Content
-      </a>
+      <a id="skip-nav" class="screenreader-only" href="#main-content"> Skip to Content </a>
       <nav class="primary-nav | bg-neutral-200">
         <ul role="list" class="container">
           <li><a href="/">Home</a></li>
@@ -29,14 +24,74 @@
     </header>
     <main id="main-content" class="container">
       <section>
-        <h1 class="fs-primary clr-primary-400">
-          Hi, I'm Sam. I make beautiful websites.
-        </h1>
-        <p class="fs-secondary">
-          Let me help your digital dream become a reality.
+        <h1 class="fs-primary clr-primary-400">Hi, I'm Sam.</h1>
+        <p class="fs-secondary">Seeking a position as a developer for the glory of God.</p>
+      </section>
+      <section>
+        <h2>Experience</h2>
+        <h3>Adjunct Professor of Computer Science & Engineering</h3>
+        <p>Taylor University | Since Spring 2023</p>
+        <ul>
+          <li>Taught Principles of Human & Computer Interaction, discussing human-centered design principles</li>
+          <li>Taught Interactive Webpage Development, covering programming and principles of the web</li>
+        </ul>
+
+        <h3>Web Developer</h3>
+        <p>Taylor University | Since Spring 2021</p>
+        <ul>
+          <li>Collaborated with marketing team on undergrad website, leading to two of the largest enrollments</li>
+          <li>Created a new admissions application for all degrees with HTML/CSS/JS and Salesforce</li>
+          <li>Transitioned to new website platform and design</li>
+        </ul>
+
+        <h3>Software Development Intern</h3>
+        <p>SIL International | Summer 2019</p>
+        <p>Worked with Jason Naylor and other interns to develop a tool to aid in rapid word collection Implemented back-end API functionality and integration with LIFT files</p>
+      </section>
+      <section>
+        <h2>Education</h2>
+        <h3>Bachelor of Arts in Computer Science & Mathematics</h3>
+        <p>Taylor University | Upland, IN</p>
+        <p>Class of 2020 | GPA: 3.98</p>
+        <h3>Relevant Courses</h3>
+        <ul>
+          <li>Machine Learning</li>
+          <li>Linear Algebra</li>
+          <li>Data Visualization</li>
+          <li>Math Modeling & Numerical Analysis</li>
+          <li>Data Structures & Algorithms</li>
+          <li>Mathematical Statistics</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML/CSS</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>Google Suite</li>
+          <li>Bash</li>
+          <li>REST APIs</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Leadership</h2>
+        <ul>
+          <li>Personnel Assistant (RA)</li>
+          <li>Discipleship Assistant</li>
+          <li>Hall Front Desk Manager</li>
+          <li>Cellist & Church Worship Leader</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Contact</h2>
+        <p><a href="mailto:sam@samskinner.dev">sam@samskinner.dev</a></p>
+        <p><a href="tel:309-336-1702">(309) 336&ndash;1702</a></p>
+        <p>
+          158 E Washington St.<br />
+          Upland, IN 46989
         </p>
       </section>
-      <section></section>
     </main>
     <footer></footer>
     <script>
@@ -45,24 +100,11 @@
 
         try {
           let app = firebase.app();
-          let features = [
-            "auth",
-            "database",
-            "firestore",
-            "functions",
-            "messaging",
-            "storage",
-            "analytics",
-            "remoteConfig",
-            "performance",
-          ].filter(feature => typeof app[feature] === "function");
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(
-            ", "
-          )}`;
+          let features = ["auth", "database", "firestore", "functions", "messaging", "storage", "analytics", "remoteConfig", "performance"].filter(feature => typeof app[feature] === "function");
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(", ")}`;
         } catch (e) {
           console.error(e);
-          loadEl.textContent =
-            "Error loading the Firebase SDK, check the console.";
+          loadEl.textContent = "Error loading the Firebase SDK, check the console.";
         }
       });
     </script>
