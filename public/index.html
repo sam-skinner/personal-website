@@ -21,9 +21,11 @@
       <nav class="primary-nav | bg-neutral-200">
         <ul role="list" class="container">
           <li><a href="/">Home</a></li>
-          <li><a href="/experience">Experience</a></li>
-          <li><a href="/portfolio">Portfolio</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -32,9 +34,19 @@
       <section>
         <h1 class="fs-primary clr-primary-400">Hi, I'm Sam.</h1>
         <p class="fs-secondary">Seeking a position as a developer for the glory of God.</p>
+        <img src="/public/img/headshot.jpeg" alt="Sam Skinner headshot" />
       </section>
       <section>
-        <h2>Experience</h2>
+        <h2 id="experience">Experience</h2>
+        <h3>Web Developer</h3>
+        <p>Taylor University | Since Spring 2021</p>
+        <ul>
+          <li>Developed/maintained internal and external sites</li>
+          <li>Collaborated with Marketing team amidst rebrand</li>
+          <li>Helped lead transition to new website platform</li>
+          <li>Managed technical aspects of SEO and analytics</li>
+        </ul>
+
         <h3>Adjunct Professor of Computer Science & Engineering</h3>
         <p>Taylor University | Since Spring 2023</p>
         <ul>
@@ -42,20 +54,16 @@
           <li>Taught Interactive Webpage Development, covering programming and principles of the web</li>
         </ul>
 
-        <h3>Web Developer</h3>
-        <p>Taylor University | Since Spring 2021</p>
-        <ul>
-          <li>Collaborated with marketing team on undergrad website, leading to two of the largest enrollments</li>
-          <li>Created a new admissions application for all degrees with HTML/CSS/JS and Salesforce</li>
-          <li>Transitioned to new website platform and design</li>
-        </ul>
-
         <h3>Software Development Intern</h3>
         <p>SIL International | Summer 2019</p>
-        <p>Worked with Jason Naylor and other interns to develop a tool to aid in rapid word collection Implemented back-end API functionality and integration with LIFT files</p>
+        <ul>
+          <li>Worked with team of interns to develop a tool to aid in rapid word collection for Bible translation</li>
+          <li>Implemented back-end API functionality in C#/.NET to import pre-existing language data</li>
+        </ul>
       </section>
+
       <section>
-        <h2>Education</h2>
+        <h2 id="education">Education</h2>
         <h3>Bachelor of Arts in Computer Science & Mathematics</h3>
         <p>Taylor University | Upland, IN</p>
         <p>Class of 2020 | GPA: 3.98</p>
@@ -69,19 +77,39 @@
           <li>Mathematical Statistics</li>
         </ul>
       </section>
+
       <section>
-        <h2>Skills</h2>
-        <ul>
-          <li>HTML/CSS</li>
-          <li>JavaScript</li>
-          <li>Python</li>
-          <li>Google Suite</li>
-          <li>Bash</li>
-          <li>REST APIs</li>
-        </ul>
+        <h2 id="skills">Skills</h2>
+        <table>
+          <tr>
+            <td>HTML/CSS</td>
+            <td>&#9679;&#9679;&#9679;&#9679;&#9679;</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>&#9679;&#9679;&#9679;&#9679;&#9679;</td>
+          </tr>
+          <tr>
+            <td>CMS Oversight</td>
+            <td>&#9679;&#9679;&#9679;&#9679;&#9675;</td>
+          </tr>
+          <tr>
+            <td>Velocity Scripting</td>
+            <td>&#9679;&#9679;&#9679;&#9679;&#9675;</td>
+          </tr>
+          <tr>
+            <td>Web Scripting</td>
+            <td>&#9679;&#9679;&#9679;&#9675;&#9675;</td>
+          </tr>
+          <tr>
+            <td>Google Analytics</td>
+            <td>&#9679;&#9679;&#9679;&#9675;&#9675;</td>
+          </tr>
+        </table>
       </section>
+
       <section>
-        <h2>Leadership</h2>
+        <h2 id="leadership">Leadership</h2>
         <ul>
           <li>Personnel Assistant (RA)</li>
           <li>Discipleship Assistant</li>
@@ -89,14 +117,22 @@
           <li>Cellist & Church Worship Leader</li>
         </ul>
       </section>
+
       <section>
-        <h2>Contact</h2>
+        <h2 id="contact">Contact</h2>
         <p><a href="mailto:sam@samskinner.dev">sam@samskinner.dev</a></p>
         <p><a href="tel:309-336-1702">(309) 336&ndash;1702</a></p>
         <p>
           158 E Washington St.<br />
           Upland, IN 46989
         </p>
+        <form action="mailto:sam@samskinner.dev" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" />
+
+          <label for="comment">Comment</label>
+          <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+        </form>
       </section>
     </main>
 
