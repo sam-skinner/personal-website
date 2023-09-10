@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,7 +20,6 @@
       <a id="skip-nav" class="screenreader-only" href="#main-content"> Skip to Content </a>
       <nav class="primary-nav | bg-neutral-200">
         <ul role="list" class="container">
-          <li><a href="/">Home</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -34,12 +33,13 @@
       <section>
         <h1 class="fs-primary clr-primary-400">Hi, I'm Sam.</h1>
         <p class="fs-secondary">Seeking a position as a developer for the glory of God.</p>
-        <img src="./img/headshot.jpeg" alt="Sam Skinner headshot" />
+        <img src="./img/headshot.jpeg" alt="Sam Skinner headshot" height="250" width="250" />
       </section>
+
       <section>
         <h2 id="experience">Experience</h2>
         <h3>Web Developer</h3>
-        <p>Taylor University | Since Spring 2021</p>
+        <p><em>Taylor University | Since Spring 2021</em></p>
         <ul>
           <li>Developed/maintained internal and external sites</li>
           <li>Collaborated with Marketing team amidst rebrand</li>
@@ -48,14 +48,14 @@
         </ul>
 
         <h3>Adjunct Professor of Computer Science & Engineering</h3>
-        <p>Taylor University | Since Spring 2023</p>
+        <p><em>Taylor University | Since Spring 2023</em></p>
         <ul>
           <li>Taught Principles of Human & Computer Interaction, discussing human-centered design principles</li>
           <li>Taught Interactive Webpage Development, covering programming and principles of the web</li>
         </ul>
 
         <h3>Software Development Intern</h3>
-        <p>SIL International | Summer 2019</p>
+        <p><em>SIL International | Summer 2019</em></p>
         <ul>
           <li>Worked with team of interns to develop a tool to aid in rapid word collection for Bible translation</li>
           <li>Implemented back-end API functionality in C#/.NET to import pre-existing language data</li>
@@ -65,9 +65,9 @@
       <section>
         <h2 id="education">Education</h2>
         <h3>Bachelor of Arts in Computer Science & Mathematics</h3>
-        <p>Taylor University | Upland, IN</p>
+        <p><em>Taylor University | Upland, IN</em></p>
         <p>Class of 2020 | GPA: 3.98</p>
-        <h3>Relevant Courses</h3>
+        <h4>Relevant Courses</h4>
         <ul>
           <li>Interactive Webpage Development</li>
           <li>Multi-tier Web App Development</li>
@@ -120,16 +120,16 @@
         <h2 id="contact">Contact</h2>
         <p><a href="mailto:sam@samskinner.dev">sam@samskinner.dev</a></p>
         <p><a href="tel:309-336-1702">(309) 336&ndash;1702</a></p>
-        <p>
+        <address>
           158 E Washington St.<br />
           Upland, IN 46989
-        </p>
+        </address>
         <form action="mailto:sam@samskinner.dev" method="POST">
           <label for="name">Name</label><br />
           <input type="text" id="name" name="name" /><br />
 
           <label for="comment">Comment</label><br />
-          <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+          <textarea name="comment" id="comment" cols="10" rows="10"></textarea>
         </form>
       </section>
     </main>
