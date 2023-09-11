@@ -18,8 +18,8 @@
   <body>
     <header>
       <a id="skip-nav" class="screenreader-only" href="#main-content"> Skip to Content </a>
-      <nav class="primary-nav | bg-neutral-200">
-        <ul role="list" class="container">
+      <nav class="primary-nav">
+        <ul role="list" class="container flex">
           <li><a href="#experience">Experience</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -80,7 +80,7 @@
         <h2 id="skills">Skills</h2>
         <table>
           <tr>
-            <td>HTML/CSS</td>
+            <td width="200">HTML/CSS</td>
             <td>&#9679;&#9679;&#9679;&#9679;&#9679;</td>
           </tr>
           <tr>
@@ -129,13 +129,15 @@
           <input type="text" id="name" name="name" /><br />
 
           <label for="comment">Comment</label><br />
-          <textarea name="comment" id="comment" cols="10" rows="10"></textarea>
+          <textarea name="comment" id="comment" cols="20" rows="1"></textarea><br />
+
+          <input type="submit" value="Submit" />
         </form>
       </section>
     </main>
 
     <footer class="text-center">
-      <small>&copy; 2022 Sam Skinner</small>
+      <small>&copy; 2023 Sam Skinner</small>
     </footer>
 
     <script>

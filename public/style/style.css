@@ -27,6 +27,11 @@ html {
   outline-color: currentColor;
 }
 
+ul,
+ol {
+  margin-inline-start: 1rem;
+}
+
 a {
   position: relative;
   text-decoration: none;
@@ -115,4 +120,10 @@ a:focus::after {
 }
 .section {
   padding-block: 3rem;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
