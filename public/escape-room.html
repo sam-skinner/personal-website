@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room</title>
+  </head>
+  <body>
+    <input type="text" name="level1" id="level1">
+    <button id="check">Check</button>
+    <footer>
+      <script>
+        const checkBtn = document.getElementById("check");
+        const level1 = document.getElementById("level1");
+        checkBtn.addEventListener("click", () => {
+          level1.value == "1234" ? alert("correct") : alert("incorrect");
+        });
+      </script>
+    </footer>
+  </body>
+</html>
