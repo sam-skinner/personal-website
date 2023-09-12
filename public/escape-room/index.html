@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escape Room</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        background-color: #2e323b;
+        color: #fff;
+      }
+
+      .container {
+        display: grid;
+        place-items: center;
+      }
+    </style>
   </head>
   <body>
-    <input type="text" name="level1" id="level1">
-    <button id="check">Check</button>
+    <div class="container">
+      <div class="form">
+        <input type="text" name="level1" id="level1">
+        <button id="check">Check</button>
+      </div>
+    </div>
     <footer>
       <script>
         const checkBtn = document.getElementById("check");
