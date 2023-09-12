@@ -4,33 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escape Room</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
     <style>
       body {
         margin: 0;
-        min-height: 100dvh;
         background-color: #2e323b;
         color: #fff;
+        font-family: "Atkinson Hyperlegible", sans-serif;
       }
 
       .container {
         display: grid;
         place-items: center;
+        min-height: 100dvh;
+      }
+
+      input,
+      button {
+        padding: 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        font: inherit
+      }
+
+      button {
+        background-color: #72d9f0;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      button:where(:hover, :focus) {
+        background-color: #dba0db;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="form">
-        <input type="text" name="level1" id="level1">
+        <input type="text" name="solution" id="solution">
         <button id="check">Check</button>
       </div>
     </div>
     <footer>
       <script>
         const checkBtn = document.getElementById("check");
-        const level1 = document.getElementById("level1");
+        const solution = document.getElementById("solution");
         checkBtn.addEventListener("click", () => {
-          level1.value == "1234" ? alert("correct") : alert("incorrect");
+          solution.value == "1234" ? window.location.href = "/escape-room/1234.html" : alert("Incorrect. Please try again.");
         });
       </script>
     </footer>
