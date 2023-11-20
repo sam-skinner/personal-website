@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" /> -->
 
     <script defer src="/__/firebase/9.9.0/firebase-app-compat.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
@@ -17,9 +17,8 @@
 
   <body>
     <header>
-      <a id="skip-nav" class="screenreader-only" href="#main-content"> Skip to Content </a>
-      <nav class="primary-nav">
-        <ul role="list" class="container flex">
+      <nav class="container margin-block-3">
+        <ul class="nav-list">
           <li><a href="#experience">Experience</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -30,57 +29,62 @@
     </header>
 
     <main id="main-content" class="container">
-      <section>
-        <h1 class="fs-primary clr-primary-400">Hi, I'm Sam.</h1>
-        <p class="fs-secondary">Seeking a position as a developer for the glory of God.</p>
-        <img src="./img/headshot.jpeg" alt="Sam Skinner headshot" height="250" width="250" />
+      <section id="intro">
+        <div class="intro-text">
+          <h1>Hi, I'm Sam.</h1>
+          <p class="font-size-secondary">Seeking a position as a developer for the glory of God.</p>
+        </div>
+        <img src="https://samskinner.dev/img/headshot.jpeg" alt="Sam Skinner headshot" height="250" width="250">
       </section>
-
-      <section>
-        <h2 id="experience">Experience</h2>
-        <h3>Web Developer</h3>
-        <p><em>Taylor University | Since Spring 2021</em></p>
-        <ul>
-          <li>Developed/maintained internal and external sites</li>
-          <li>Collaborated with Marketing team amidst rebrand</li>
-          <li>Helped lead transition to new website platform</li>
-          <li>Managed technical aspects of SEO and analytics</li>
-        </ul>
-
-        <h3>Adjunct Professor of Computer Science & Engineering</h3>
-        <p><em>Taylor University | Since Spring 2023</em></p>
-        <ul>
-          <li>Taught Principles of Human & Computer Interaction, discussing human-centered design principles</li>
-          <li>Taught Interactive Webpage Development, covering programming and principles of the web</li>
-        </ul>
-
-        <h3>Software Development Intern</h3>
-        <p><em>SIL International | Summer 2019</em></p>
-        <ul>
-          <li>Worked with team of interns to develop a tool to aid in rapid word collection for Bible translation</li>
-          <li>Implemented back-end API functionality in C#/.NET to import pre-existing language data</li>
-        </ul>
+      <section id="experience">
+        <h2>Experience</h2>
+        <div class="equal-cols">
+          <div class="col">
+            <h3>Web Developer</h3>
+            <p><em>Taylor University | Since Spring 2021</em></p>
+            <ul>
+              <li>Developed/maintained internal and external sites</li>
+              <li>Collaborated with Marketing team amidst rebrand</li>
+              <li>Helped lead transition to new website platform</li>
+              <li>Managed technical aspects of SEO and analytics</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Adjunct Professor of Computer Science & Engineering</h3>
+            <p><em>Taylor University | Since Spring 2023</em></p>
+            <ul>
+              <li>Taught Principles of Human & Computer Interaction, discussing human-centered design principles</li>
+              <li>Taught Interactive Webpage Development, covering programming and principles of the web</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Software Development Intern</h3>
+            <p><em>SIL International | Summer 2019</em></p>
+            <ul>
+              <li>Worked with team of interns to develop a tool to aid in rapid word collection for Bible translation</li>
+              <li>Implemented back-end API functionality in C#/.NET to import pre-existing language data</li>
+            </ul>
+          </div>
+        </div>
       </section>
-
-      <section>
-        <h2 id="education">Education</h2>
+      <section id="education">
+        <h2>Education</h2>
         <h3>Bachelor of Arts in Computer Science & Mathematics</h3>
         <p><em>Taylor University | Upland, IN</em></p>
         <p>Class of 2020 | GPA: 3.98</p>
         <h4>Relevant Courses</h4>
-        <ul>
+        <ul class="pills">
           <li>Interactive Webpage Development</li>
           <li>Multi-tier Web App Development</li>
           <li>Data Structures & Algorithms</li>
           <li>Data Visualization</li>
         </ul>
       </section>
-
-      <section>
-        <h2 id="skills">Skills</h2>
+      <section id="skills">
+        <h2>Skills</h2>
         <table>
           <tr>
-            <td width="200">HTML/CSS</td>
+            <td>HTML/CSS</td>
             <td>&#9679;&#9679;&#9679;&#9679;&#9679;</td>
           </tr>
           <tr>
@@ -96,7 +100,7 @@
             <td>&#9679;&#9679;&#9679;&#9679;&#9675;</td>
           </tr>
           <tr>
-            <td>Web Scripting</td>
+            <td>Web Accessibility</td>
             <td>&#9679;&#9679;&#9679;&#9675;&#9675;</td>
           </tr>
           <tr>
@@ -105,38 +109,47 @@
           </tr>
         </table>
       </section>
-
-      <section>
-        <h2 id="leadership">Leadership</h2>
-        <ul>
+      <section id="leadership">
+        <h2>Leadership</h2>
+        <ul class="pills">
           <li>Personnel Assistant (RA)</li>
           <li>Discipleship Assistant</li>
           <li>Hall Front Desk Manager</li>
           <li>Cellist & Church Worship Leader</li>
         </ul>
       </section>
-
-      <section>
-        <h2 id="contact">Contact</h2>
-        <p><a href="mailto:sam@samskinner.dev">sam@samskinner.dev</a></p>
-        <p><a href="tel:309-336-1702">(309) 336&ndash;1702</a></p>
-        <address>
-          158 E Washington St.<br />
-          Upland, IN 46989
-        </address>
+      <section id="contact">
+        <div class="contact-contact">
+          <h2>Contact</h2>
+          <p class="email">
+            <img src="/10-02/email.svg" alt="" width="25">
+            <a href="mailto:sam@samskinner.dev">sam@samskinner.dev</a>
+          </p>
+          <p class="phone">
+            <img src="/10-02/phone.svg" alt="" width="25">
+            <a href="tel:309-336-1702">(309) 336&ndash;1702</a>
+          </p>
+          <div class="address">
+            <img src="/10-02/address.svg" alt="" width="25">
+            <address>
+              158 E Washington St.<br>
+              Upland, IN 46989
+            </address>
+          </div>
+        </div>
         <form action="mailto:sam@samskinner.dev" method="POST">
-          <label for="name">Name</label><br />
-          <input type="text" id="name" name="name" /><br />
-
-          <label for="comment">Comment</label><br />
-          <textarea name="comment" id="comment" cols="20" rows="1"></textarea><br />
-
-          <input type="submit" value="Submit" />
+          <label class="required" for="name">Name</label>
+          <input type="text" id="name" name="name">
+          <label class="required" for="email">Email</label>
+          <input type="text" id="email" name="email">
+          <label class="required" for="comment">Comment</label>
+          <textarea name="comment" id="comment" cols="20" rows="1"></textarea>
+          <input class="button" type="submit" value="Submit">
         </form>
       </section>
     </main>
 
-    <footer class="text-center">
+    <footer class="container text-center margin-block-3">
       <small>&copy; 2023 Sam Skinner</small>
     </footer>
 

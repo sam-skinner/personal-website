@@ -1,129 +1,326 @@
 @import "reset.css";
 
+/*------------VARIABLES------------*/
 :root {
-  --clr-primary-400: hsl(240 76% 57% / 1);
-  --clr-secondary-400: hsl(179 49% 83% / 1);
-  --clr-accent-400: hsl(23 90% 60% / 1);
-
-  --clr-neutral-100: hsl(0 0% 100% / 1);
-  --clr-neutral-200: hsl(15 100% 87% / 1);
-  --clr-neutral-700: hsl(297 13% 27% / 1);
-  --clr-neutral-900: hsl(0 0% 0% / 1);
-
-  --ff-sans: "Atkinson Hyperlegible", sans-serif;
-
-  --fs-body: 1rem;
-  --fs-secondary: 2rem;
-  --fs-primary: 3.5rem;
+  --bg-dark: #16191f;
+  --bg-light: #2e323b;
+  --text-color: #e7e7e7;
+  --red: #ff5858;
+  --blue: #72d9f0;
+  --green: #a5cf27;
+  --yellow: #fcc642;
+  --purple: #dba0db;
+  --font-family: montserrat, sans-serif;
 }
 
-/* Composition */
-html {
-  font-family: var(--ff-sans);
-  color: var(--clr-neutral-700);
-}
-
-:focus-visible {
-  outline-color: currentColor;
-}
-
-ul,
-ol {
-  margin-inline-start: 1rem;
+/*------------COLORS------------*/
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-color);
 }
 
 a {
-  position: relative;
-  text-decoration: none;
-  color: var(--clr-accent-400);
+  color: var(--blue);
 }
 a:hover,
 a:focus {
-  color: var(--clr-neutral-200);
+  color: var(--purple);
 }
-a::after {
-  content: "";
-  position: absolute;
+
+h1 {
+  color: var(--red);
+}
+h2 {
+  color: var(--yellow);
+}
+h3 {
+  color: var(--green);
+}
+h4 {
+  color: var(--purple);
+}
+
+section {
+  padding-block: 3rem;
+}
+
+tr:nth-child(even) {
+  background-color: var(--bg-light);
+}
+
+.button {
+  background-color: var(--green);
+}
+.button:hover,
+.button:focus {
+  background-color: var(--yellow);
+}
+
+form {
+  background-color: var(--bg-light);
+}
+
+/*------------DISPLAY------------*/
+
+label,
+input {
   display: block;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: currentColor;
-  transform: scale(0);
-  transition: transform 250ms ease;
-  transform-origin: left;
-}
-a:hover::after,
-a:focus::after {
-  transform: scale(1);
 }
 
-/* Utility */
-.fs-primary {
-  font-size: var(--fs-primary);
-}
-.fs-secondary {
-  font-size: var(--fs-secondary);
+/*------------FONT-----------*/
+body {
+  font-family: var(--font-family);
 }
 
-.clr-primary-400 {
-  color: var(--clr-primary-400);
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+em {
+  font-size: 1.125rem;
 }
 
-.bg-neutral-200 {
-  background-color: var(--clr-neutral-200);
+.font-size-secondary {
+  font-size: 2rem;
 }
+
+a {
+  font-weight: bold;
+}
+label {
+  font-weight: bold;
+}
+
+address {
+  font-style: normal;
+}
+
+.button {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/*------------TEXT------------*/
+a {
+  text-decoration: none;
+}
+
 .text-center {
   text-align: center;
 }
 
-/* Block */
-.screenreader-only {
-  position: absolute;
-  left: -999px;
-  top: auto;
-  height: 1px;
-  width: 1px;
+/*------------BOX MODEL------------*/
+.nav-list {
+  padding: 0;
 }
-.screenreader-only:focus {
-  display: inline-block;
-  position: static;
-  height: auto;
-  width: auto;
-  margin: auto;
+ul:not([class]),
+ol:not([class]) {
+  padding-left: 1rem;
 }
 
 .container {
-  width: calc(100% - 2rem);
-  max-width: 60rem;
+  width: 80%;
   margin-inline: auto;
 }
-
-.primary-nav {
-  padding-block: 2rem;
-  box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.5);
-  font-size: 1.25rem;
+.margin-block-3 {
+  margin-block: 3rem;
 }
 
-.nav-list {
-  text-align: center;
+table {
+  width: 100%;
+  margin-inline: auto;
+  border: 1px solid var(--text-color);
+}
+th,
+td {
+  padding: 0.5rem;
 }
 @media (min-width: 40em) {
-  .nav-list {
-    display: flex;
-    justify-content: space-between;
+  table {
+    width: 80%;
   }
 }
 
-.hero {
-  padding-block: 5rem;
+form {
+  border: 1px solid var(--text-color);
+  padding: 2rem;
+  margin-block: 2rem;
 }
-.section {
-  padding-block: 3rem;
+label {
+  margin-block: 1rem 0.25rem;
+}
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
+input[type="submit"] {
+  border: none;
+  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  margin-block: 1rem;
 }
 
-.flex {
+/*------------LAYOUT------------*/
+.nav-list {
+  list-style-type: none;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+#intro {
+  display: grid;
+  gap: 5rem;
+}
+#intro img {
+  width: 100%;
+  height: auto;
+  border-radius: 2rem;
+}
+@media (min-width: 40em) {
+  #intro {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+
+@media (min-width: 64em) {
+  .equal-cols {
+    display: flex;
+    gap: 2rem;
+  }
+  .equal-cols > * {
+    flex: 1;
+  }
+}
+
+.pills {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.pills > * {
+  background-color: var(--bg-light);
+  padding: 0.5rem;
+  border-radius: 100vw;
+}
+
+#contact {
+  display: grid;
+  gap: 5rem;
+}
+@media (min-width: 64em) {
+  #contact {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.email,
+.phone,
+.address {
+  display: grid;
+  grid-template-columns: 25px auto;
   gap: 0.5rem;
+  align-items: center;
+}
+
+/*------------ADVANCED------------*/
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--bg-light);
+  box-shadow: 0 0 1rem var(--blue);
+}
+#intro {
+  padding-top: 10rem;
+}
+html {
+  scroll-padding-top: 10rem;
+}
+
+h1 {
+  margin-inline-end: 2.5rem;
+}
+.intro-text {
+  position: relative;
+  font-family: monospace;
+}
+.intro-text::before {
+  content: "{";
+  position: absolute;
+  font-size: 5rem;
+  color: var(--red);
+  top: 0.5rem;
+  right: 0;
+}
+.intro-text::after {
+  content: "}";
+  position: absolute;
+  font-size: 5rem;
+  color: var(--red);
+  bottom: -3.5rem;
+  right: 0;
+}
+
+input,
+textarea {
+  border-radius: 0.5rem;
+  border: none;
+}
+.button {
+  cursor: pointer;
+}
+form > *:focus {
+  outline: 1px solid var(--yellow);
+  outline-offset: 2px;
+}
+
+.intro-text p {
+  position: relative;
+  margin-inline: 2rem;
+}
+.intro-text p::after {
+  content: "|";
+  position: absolute;
+  animation: blink 1s ease-out infinite;
+  padding-left: 1rem;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+a {
+  position: relative;
+  width: fit-content;
+}
+a::after {
+  content: "";
+  position: absolute;
+  background-color: currentColor;
+  bottom: -0.5rem;
+  left: 0;
+  height: 0.25rem;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 300ms ease-in-out;
+}
+a:hover::after,
+a:focus::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
